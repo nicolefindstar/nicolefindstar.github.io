@@ -7,11 +7,163 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css?v=3" />
+  <style>
+    .research-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .research-card {
+      border: 1.5px solid #e2e2de;
+      border-left: 5px solid #e2e2de;
+      border-radius: 6px;
+      padding: 1.8rem 2rem;
+      background: #fff;
+      transition: box-shadow 0.15s;
+    }
+
+    .research-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    }
+
+    .research-card.card-blue  { border-left-color: #1965B0; background: rgba(123,175,222,0.06); }
+    .research-card.card-gold  { border-left-color: #F6C141; background: rgba(246,193,65,0.07);  }
+    .research-card.card-green { border-left-color: #4EB265; background: rgba(144,201,135,0.08); }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.35;
+    }
+
+    .card-badges {
+      display: flex;
+      gap: 0.4rem;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .badge-collab { background: #D1BBD7; color: #4a1a4a; }
+    .badge-draft  { background: #F1932D; color: #fff;    }
+    .badge-pub    { background: #CAE0AB; color: #1a4a2a; }
+    .badge-report { background: #7BAFDE; color: #0d3563; }
+
+    .card-desc {
+      font-size: 14px;
+      color: #5e5e5e;
+      line-height: 1.7;
+      margin-bottom: 1.3rem;
+    }
+
+    .outputs-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 0.7rem;
+    }
+
+    .output-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .output-item {
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .output-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .output-status {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .status-pub    { background: #CAE0AB; color: #1a4a2a; }
+    .status-draft  { background: #F6C141; color: #5a3a00; }
+    .status-report { background: #7BAFDE; color: #0d3563; }
+    .status-book   { background: #D1BBD7; color: #4a1a4a; }
+
+    .output-text {
+      font-size: 13.5px;
+      color: #2e2e2e;
+      line-height: 1.55;
+    }
+
+    .output-text em {
+      color: #5e5e5e;
+      font-style: normal;
+    }
+
+    .output-venue {
+      display: block;
+      font-size: 12.5px;
+      color: #888;
+      font-style: italic;
+      margin-top: 0.15rem;
+    }
+
+    .output-link {
+      font-size: 11px;
+      font-weight: 700;
+      color: #1965B0;
+      text-decoration: none;
+      margin-left: 0.4rem;
+    }
+
+    .output-link:hover { text-decoration: underline; }
+
+    .section-intro {
+      font-size: 14.5px;
+      color: #5e5e5e;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+  </style>
 </head>
 <body>
 
 <nav>
-  <a class="name" href="/">Nicole Y. Wu</a>
+  <a class="name" href="../">Nicole Y. Wu</a>
   <ul>
     <li><a href="../">About</a></li>
     <li><a href="../research/" class="active">Research</a></li>
@@ -25,62 +177,121 @@
 <main>
 
   <section>
-    <h2>Publications</h2>
-    <ul class="pub-list">
-      <li class="pub-item">
-        <div class="pub-title">Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</div>
-        <div class="pub-authors">V Mueller, N Wu, A Rabbani, K Gröpin</div>
-        <div class="pub-venue">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis, 2026</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Unmasking the truth: Experimental evidence of facemask compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 pandemic</div>
-        <div class="pub-authors">KA Gröpin, V Mueller, N Wu, A Rabbani</div>
-        <div class="pub-venue">PLOS Global Public Health, 2023</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Do referrals improve the representation of women in mobile phone surveys?</div>
-        <div class="pub-authors">S Glazerman, KA Grepin, V Mueller, M Rosenbaum, N Wu</div>
-        <div class="pub-venue">Journal of Development Economics, 2023</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Food insecurity and COVID-19 risk in low- and middle-income countries</div>
-        <div class="pub-authors">V Mueller, KA Gröpin, A Rabbani, B Navia, ASW Ngunjiri, N Wu</div>
-        <div class="pub-venue">Applied Economic Perspectives and Policy, 2022</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Residential energy efficiency interventions: A meta-analysis of effectiveness studies</div>
-        <div class="pub-authors">M Berretta, J Furgeson, Y Wu, C Zamawe, I Hamilton, J Eyers</div>
-        <div class="pub-venue">Campbell Systematic Reviews, 2021</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Scaling better together: The International Livestock Research Institute's framework for scaling</div>
-        <div class="pub-authors">I Dror, N Wu</div>
-        <div class="pub-venue">International Livestock Research Institute, 2020</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-      <li class="pub-item">
-        <div class="pub-title">Scaling readiness report and scaling plan for training and certification approach for small scale pig feed producers in Uganda</div>
-        <div class="pub-authors">M Sartas, E Kang'ethe, N Wu, I Dror</div>
-        <div class="pub-venue">International Livestock Research Institute, 2020</div>
-        <div class="pub-links"><a href="#">Link</a></div>
-      </li>
-    </ul>
-  </section>
+    <h2>Research Projects</h2>
+    <p class="section-intro">
+      My research focuses on household welfare measurement, remote data collection methods, and gender outcomes in development contexts.
+    </p>
 
-  <section>
-    <h2>Working Papers</h2>
-    <ul class="pub-list">
-      <li class="pub-item">
-        <div class="pub-title">[Working paper title]</div>
-        <div class="pub-authors">Nicole Y. Wu</div>
-        <div class="pub-venue">Draft available upon request</div>
-      </li>
-    </ul>
+    <div class="research-grid">
+
+      <!-- Project 1: COVID Phone Surveys -->
+      <div class="research-card card-blue">
+        <div class="card-top">
+          <div class="card-title">COVID-19, Food Security &amp; Gender: Phone Survey Evidence from LMICs</div>
+          <div class="card-badges">
+            <span class="badge badge-pub">3 Published · 1 Book Chapter</span>
+            <span class="badge badge-collab">Bangladesh · Kenya · Nigeria</span>
+          </div>
+        </div>
+        <p class="card-desc">
+          A longitudinal phone survey study tracking household food security, employment, mental health, and gender outcomes across three rounds in Bangladesh, Kenya, and Nigeria during and after COVID-19. Examines who gets reached by phone surveys, how food insecurity and mask-wearing behavior evolved, and how women's vulnerabilities changed over time.
+        </p>
+        <div class="outputs-label">Outputs</div>
+        <ul class="output-list">
+          <li class="output-item">
+            <span class="output-status status-pub">Published</span>
+            <span class="output-text">
+              <strong>Do referrals improve the representation of women in mobile phone surveys?</strong>
+              <em> S Glazerman, KA Grépin, V Mueller, M Rosenbaum, N Wu</em>
+              <span class="output-venue">Journal of Development Economics, 2023 <a class="output-link" href="_reports/1-s2.0-S0304387823000329-main.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-pub">Published</span>
+            <span class="output-text">
+              <strong>Food insecurity and COVID-19 risk in low- and middle-income countries</strong>
+              <em> V Mueller, KA Grépin, A Rabbani, B Navia, ASW Ngunjiri, N Wu</em>
+              <span class="output-venue">Applied Economic Perspectives and Policy, 2022 <a class="output-link" href="_reports/AEPP-44-92.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-pub">Published</span>
+            <span class="output-text">
+              <strong>Unmasking the truth: Experimental evidence of facemask compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 pandemic</strong>
+              <em> KA Grépin, V Mueller, N Wu, A Rabbani</em>
+              <span class="output-venue">PLOS Global Public Health, 2023 <a class="output-link" href="_reports/journal.pgph.0001086.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-book">Book Chapter</span>
+            <span class="output-text">
+              <strong>Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</strong>
+              <em> V Mueller, N Wu, A Rabbani, K Grépin</em>
+              <span class="output-venue">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis, MIT Press, 2026 <a class="output-link" href="_reports/c007200_9780262385695.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Project 2: rCARI / WFP -->
+      <div class="research-card card-gold">
+        <div class="card-top">
+          <div class="card-title">Validating Remote Food Security Measurement: The rCARI Study</div>
+          <div class="card-badges">
+            <span class="badge badge-draft">Draft Stage</span>
+            <span class="badge badge-collab">WFP</span>
+          </div>
+        </div>
+        <p class="card-desc">
+          A multi-country validation study comparing the remote Consolidated Approach for Reporting Indicators of Food Security (rCARI) against standard face-to-face CARI methodology. Conducted in Myanmar, Ecuador, and the Central African Republic in collaboration with WFP. The study finds that rCARI is context-specific and tends to report lower food insecurity prevalence than in-person methods.
+        </p>
+        <div class="outputs-label">Outputs</div>
+        <ul class="output-list">
+          <li class="output-item">
+            <span class="output-status status-draft">Working Paper</span>
+            <span class="output-text">
+              <strong>Assessing household food security in emergencies: does remote data collection cover the gap?</strong>
+              <em> A Weyori, N Wu, M Salem</em>
+              <span class="output-venue">Draft, 2024 <a class="output-link" href="_reports/Journal_Article_2024.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-report">WFP Report</span>
+            <span class="output-text">
+              <strong>Validation and Calibration of the Remote Consolidated Approach of Reporting on Food Security (rCARI): Preliminary results from Myanmar, Ecuador, and Central African Republic</strong>
+              <em> rCARI Study Team · WFP</em>
+              <span class="output-venue">WFP Internal Report, 2024 <a class="output-link" href="_reports/rCARI_Summary_Report_2.4.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Project 3: WhatsApp & Women's Livelihoods -->
+      <div class="research-card card-green">
+        <div class="card-top">
+          <div class="card-title">WhatsApp &amp; Women's Livelihoods: Digital Practices and Economic Participation</div>
+          <div class="card-badges">
+            <span class="badge badge-report">Report</span>
+            <span class="badge badge-collab">Caribou Digital</span>
+          </div>
+        </div>
+        <p class="card-desc">
+          Examines how women across multiple countries use WhatsApp in their daily economic lives — analyzing barriers and drivers of adoption, and how the platform shapes pathways into formal and informal economic participation.
+        </p>
+        <div class="outputs-label">Outputs</div>
+        <ul class="output-list">
+          <li class="output-item">
+            <span class="output-status status-report">Report</span>
+            <span class="output-text">
+              <strong>WhatsApp and Women's Livelihoods: How Everyday Digital Practices Shape Pathways to Economic Participation</strong>
+              <em> J Donner, M Dean, M Karabaczek, N Wu, S Korlimarla, C Mapitsa</em>
+              <span class="output-venue">Caribou Digital Publishing, 2026 <a class="output-link" href="_reports/WhatsApp-and-Womens-Livelihoods-1.pdf" target="_blank">PDF →</a></span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </section>
 
 </main>
