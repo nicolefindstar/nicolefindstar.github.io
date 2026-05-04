@@ -140,6 +140,46 @@
 
     .output-link:hover { background: #1965B0; color: #fff; }
 
+    .abstract-btn {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #888;
+      text-decoration: none;
+      border: 1.5px solid #ccc;
+      border-radius: 3px;
+      padding: 3px 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      background: transparent;
+      transition: all 0.15s;
+      margin-top: 0.4rem;
+    }
+
+    .abstract-btn:hover { border-color: #888; color: #444; }
+
+    .abstract-box {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 13px;
+      color: #4a4a4a;
+      line-height: 1.65;
+      background: rgba(0,0,0,0.03);
+      border-left: 3px solid #ddd;
+      padding: 0.75rem 1rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .abstract-box.open { display: block; }
+
+    .output-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0;
+      flex-shrink: 0;
+    }
+
     .section-intro {
       font-size: 14.5px;
       color: #5e5e5e;
@@ -190,9 +230,11 @@
             <span class="output-text">
               <strong>WhatsApp and Women's Livelihoods: How Everyday Digital Practices Shape Pathways to Economic Participation</strong>
               <span class="output-venue">Caribou Digital Publishing, 2026</span>
+              <div class="abstract-box" id="abs-5">This report examines how women across India, Kenya, Nigeria, and Pakistan use WhatsApp to support income-generating activities. Drawing on nationally representative surveys of 7,000 adults and qualitative interviews, it estimates that approximately 80–98 million working-age women across these four countries rely on WhatsApp for livelihoods. The study analyzes adoption patterns, usage depth, and barriers to effective platform engagement, finding a pronounced income gradient in effective use and identifying how gender gaps in device ownership and business access shape women's economic participation through digital platforms.</div>
             </span>
             <div class="output-right">
               <a class="output-link" href="https://doi.org/10.64329/DPIX3065" target="_blank">View Publication</a>
+              <button class="abstract-btn" onclick="toggleAbstract('abs-5', this)">Abstract</button>
             </div>
           </li>
         </ul>
@@ -223,9 +265,11 @@
             <span class="output-text">
               <strong>Do Referrals Improve the Representation of Women in Mobile Phone Surveys?</strong>
               <span class="output-venue">Journal of Development Economics, 2023</span>
+              <div class="abstract-box" id="abs-1">Random digit dial surveys with mobile phones risk under-representation of women. To address this, we compare the characteristics of women recruited directly with those of women recruited through referrals from male household members. The referral process improves representation of vulnerable groups, such as young women, the asset poor, and those living in areas with low connectivity. Among mobile phone users, we show a referral (rather than a direct dial) protocol includes more nationally representative proportions of women with these attributes. While seeking intra-household referrals may improve representation, we show that it does so at a higher cost.</div>
             </span>
             <div class="output-right">
               <a class="output-link" href="https://doi.org/10.1016/j.jdeveco.2023.103077" target="_blank">View Publication</a>
+              <button class="abstract-btn" onclick="toggleAbstract('abs-1', this)">Abstract</button>
             </div>
           </li>
           <li class="output-item">
@@ -235,9 +279,11 @@
             <span class="output-text">
               <strong>Food Insecurity and COVID-19 Risk: Insights from Mobile Phone Surveys in Bangladesh, Kenya, and Nigeria</strong>
               <span class="output-venue">Applied Economic Perspectives and Policy, 2022</span>
+              <div class="abstract-box" id="abs-2"><!-- Paste abstract here --></div>
             </span>
             <div class="output-right">
               <a class="output-link" href="https://doi.org/10.1002/aepp.13200" target="_blank">View Publication</a>
+              <button class="abstract-btn" onclick="toggleAbstract('abs-2', this)">Abstract</button>
             </div>
           </li>
           <li class="output-item">
@@ -247,9 +293,11 @@
             <span class="output-text">
               <strong>Unmasking the Truth: Experimental Evidence of Facemask Compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 Pandemic</strong>
               <span class="output-venue">PLOS Global Public Health, 2023</span>
+              <div class="abstract-box" id="abs-3">High levels of compliance with public health measures are critical to ensure a successful response to the COVID-19 pandemic and other public health emergencies. However, most data on compliance are self-reported and the tendency to overreport due to social desirability could yield biased estimates of actual compliance. A list experiment is a widely used method to estimate social desirability bias in self-reported estimates of sensitive behaviours. We estimate rates of compliance with facemask mandates in Kenya, Nigeria, and Bangladesh using data from phone surveys conducted in March-April 2021. We find large gaps between stated and elicited rates of facemask wearing: an almost 40 percentage point gap in Kenya, 30 percentage points in Nigeria, and 20 percentage points in Bangladesh. Data collected from self-reported surveys may not be reliable to monitor ongoing compliance with public health measures.</div>
             </span>
             <div class="output-right">
               <a class="output-link" href="https://doi.org/10.1371/journal.pgph.0001086" target="_blank">View Publication</a>
+              <button class="abstract-btn" onclick="toggleAbstract('abs-3', this)">Abstract</button>
             </div>
           </li>
           <li class="output-item">
@@ -259,9 +307,11 @@
             <span class="output-text">
               <strong>Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</strong>
               <span class="output-venue">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis, MIT Press, 2026</span>
+              <div class="abstract-box" id="abs-4"><!-- Paste abstract here --></div>
             </span>
             <div class="output-right">
               <a class="output-link" href="https://doi.org/10.7551/mitpress/14895.003.0011" target="_blank">View Publication</a>
+              <button class="abstract-btn" onclick="toggleAbstract('abs-4', this)">Abstract</button>
             </div>
           </li>
         </ul>
@@ -314,5 +364,12 @@
   &copy; 2026 Nicole Yue Wu
 </footer>
 
+<script>
+  function toggleAbstract(id, btn) {
+    var box = document.getElementById(id);
+    var isOpen = box.classList.toggle('open');
+    btn.textContent = isOpen ? 'Hide' : 'Abstract';
+  }
+</script>
 </body>
 </html>
