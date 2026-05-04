@@ -125,35 +125,35 @@
       margin-top: 0.2rem;
     }
 
-    .output-link {
-      display: inline-block;
+    .output-link, .abstract-btn {
+      display: block;
       font-size: 11px;
       font-weight: 700;
-      color: #1965B0;
-      text-decoration: none;
-      border: 1.5px solid #1965B0;
       border-radius: 3px;
       padding: 3px 12px;
       white-space: nowrap;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
       transition: all 0.15s;
+    }
+
+    .output-link {
+      color: #1965B0;
+      text-decoration: none;
+      border: 1.5px solid #1965B0;
+      background: transparent;
     }
 
     .output-link:hover { background: #1965B0; color: #fff; }
 
     .abstract-btn {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
       color: #888;
-      text-decoration: none;
       border: 1.5px solid #ccc;
-      border-radius: 3px;
-      padding: 3px 12px;
-      white-space: nowrap;
-      cursor: pointer;
       background: transparent;
-      transition: all 0.15s;
+      cursor: pointer;
       margin-top: 0.4rem;
+      font-family: inherit;
     }
 
     .abstract-btn:hover { border-color: #888; color: #444; }
