@@ -25,9 +25,14 @@
 
     .research-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
 
-    .research-card.card-blue  { border-left-color: #1965B0; background: rgba(123,175,222,0.06); }
-    .research-card.card-gold  { border-left-color: #F6C141; background: rgba(246,193,65,0.07);  }
-    .research-card.card-green { border-left-color: #4EB265; background: rgba(144,201,135,0.08); }
+    .research-card.card-blue   { border-left-color: #1965B0; background: rgba(123,175,222,0.06); }
+    .research-card.card-gold   { border-left-color: #F6C141; background: rgba(246,193,65,0.07);  }
+    .research-card.card-green  { border-left-color: #4EB265; background: rgba(144,201,135,0.08); }
+    .research-card.card-purple { border-left-color: #882E72; background: rgba(209,187,215,0.10); }
+
+    .status-tool { background: #AE76A3; color: #fff; }
+    .status-pkg  { background: #4EB265; color: #fff; }
+    .status-note { background: #7BAFDE; color: #0d3563; }
 
     .card-title {
       font-size: 16px;
@@ -252,6 +257,55 @@
               — J Donner, M Dean, M Karabaczek, N Wu, S Korlimarla, C Mapitsa
               <span class="output-venue">Caribou Digital Publishing, 2026
                 <a class="output-link" href="https://doi.org/10.64329/DPIX3065" target="_blank">DOI →</a>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Project 4: WFP Data Quality & Indicator Standardization -->
+      <div class="research-card card-purple">
+        <div class="card-title">Data Quality Assurance &amp; Indicator Standardization — WFP</div>
+        <div class="tags">
+          <span class="tag tag-theme">Food Security</span>
+          <span class="tag tag-theme">Data Quality</span>
+          <span class="tag tag-theme">Indicator Standardization</span>
+          <span class="tag tag-tech">Stata</span>
+          <span class="tag tag-tech">R</span>
+          <span class="tag tag-tech">SPSS</span>
+          <span class="tag tag-tech">Python</span>
+          <span class="tag tag-tech">Tableau</span>
+          <span class="tag tag-tech">ggplot2</span>
+        </div>
+        <p class="card-desc" style="margin-top:1rem;">
+          Led development and maintenance of standardized analysis scripts in Stata, R, SPSS, and Python for 20+ corporate food security and nutrition indicators — covering calculation, logical and statistical cleaning, output tables, and visualization — deployed across 20+ WFP Country Offices for needs assessments and monitoring. Co-developed <em>wfpthemes</em>, an open-source R package providing WFP-branded ggplot2 themes and color palettes. Authored the Data Quality Practical Guidance Note with accompanying checklists, questionnaire design standards, enumerator training tools, high-frequency check protocols, and cleaning procedures — the corporate reference on WFP's VAM Resource Centre. Designed a data quality monitoring dashboard in Tableau for the DRC Information Management Ecosystem Pilot.
+        </p>
+        <div class="outputs-label">Outputs</div>
+        <ul class="output-list">
+          <li class="output-item">
+            <span class="output-status status-tool">Software</span>
+            <span class="output-text">
+              <strong>RAMResourcesScripts</strong> — Standardized indicator scripts for food security and nutrition (Stata, R, SPSS, Python)
+              <span class="output-venue">
+                <a class="output-link" href="https://github.com/nicolefindstar/RAMResourcesScripts" target="_blank">GitHub →</a>
+              </span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-pkg">R Package</span>
+            <span class="output-text">
+              <strong>wfpthemes</strong> — WFP-branded ggplot2 themes and color palettes aligned with WFP Data Visualization Guidelines
+              <span class="output-venue">
+                <a class="output-link" href="https://github.com/nicolefindstar/wfpthemes" target="_blank">GitHub →</a>
+              </span>
+            </span>
+          </li>
+          <li class="output-item">
+            <span class="output-status status-note">Guidance Note</span>
+            <span class="output-text">
+              <strong>Data Quality Practical Guidance Note</strong> — Corporate reference covering the full data quality lifecycle: planning, questionnaire design, enumerator training, high-frequency checks, cleaning, and issue logging
+              <span class="output-venue">WFP VAM Resource Centre
+                <a class="output-link" href="https://docs.wfp.org/api/documents/WFP-0000161492/download/" target="_blank">PDF →</a>
               </span>
             </span>
           </li>
