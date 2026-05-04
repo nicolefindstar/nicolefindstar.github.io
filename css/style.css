@@ -19,7 +19,7 @@
   --tol-brown:        #72190E;
 
   /* Site tokens */
-  --bg:        #f8f8f6;
+  --bg:        #ffffff;
   --surface:   #ffffff;
   --text:      #1a1a1a;
   --muted:     #5e5e5e;
@@ -374,18 +374,34 @@ h2 {
 
 .project-card {
   border: 1.5px solid var(--border);
+  border-left-width: 5px;
   border-radius: 5px;
   padding: 1.6rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
   background: var(--surface);
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: box-shadow 0.15s;
 }
 
 .project-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(25, 101, 176, 0.08);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Color by type */
+.project-card.card-tool {
+  border-left-color: var(--tol-blue-dark);
+  background: rgba(123, 175, 222, 0.07);
+}
+
+.project-card.card-app {
+  border-left-color: var(--tol-green-dark);
+  background: rgba(144, 201, 135, 0.1);
+}
+
+.project-card.card-map {
+  border-left-color: var(--tol-gold);
+  background: rgba(246, 193, 65, 0.08);
 }
 
 .project-header {
