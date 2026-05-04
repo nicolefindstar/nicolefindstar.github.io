@@ -78,6 +78,15 @@
     .output-item:last-child { border-bottom: none; padding-bottom: 0; }
     .output-item:first-child { padding-top: 0; }
 
+    .output-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      width: 110px;
+    }
+
     .output-status {
       font-size: 10px;
       font-weight: 700;
@@ -86,7 +95,6 @@
       padding: 2px 7px;
       border-radius: 2px;
       white-space: nowrap;
-      flex-shrink: 0;
       width: 110px;
       text-align: center;
     }
@@ -112,15 +120,16 @@
     }
 
     .output-link {
-      display: inline-block;
+      display: block;
       font-size: 11px;
       font-weight: 700;
       color: #1965B0;
       text-decoration: none;
       border: 1.5px solid #1965B0;
       border-radius: 3px;
-      padding: 2px 10px;
-      margin-top: 0.5rem;
+      padding: 3px 0;
+      width: 110px;
+      text-align: center;
       transition: all 0.15s;
     }
 
@@ -170,35 +179,43 @@
         <div class="outputs-label">Outputs</div>
         <ul class="output-list">
           <li class="output-item">
-            <span class="output-status status-journal">Journal Article</span>
+            <div class="output-left">
+              <span class="output-status status-journal">Journal Article</span>
+              <a class="output-link" href="https://doi.org/10.1016/j.jdeveco.2023.103077" target="_blank">View Publication</a>
+            </div>
             <span class="output-text">
               <strong>Do Referrals Improve the Representation of Women in Mobile Phone Surveys?</strong>
               <span class="output-venue">Journal of Development Economics, 2023</span>
-              <a class="output-link" href="https://doi.org/10.1016/j.jdeveco.2023.103077" target="_blank">View Publication</a>
             </span>
           </li>
           <li class="output-item">
-            <span class="output-status status-journal">Journal Article</span>
+            <div class="output-left">
+              <span class="output-status status-journal">Journal Article</span>
+              <a class="output-link" href="https://doi.org/10.1002/aepp.13200" target="_blank">View Publication</a>
+            </div>
             <span class="output-text">
               <strong>Food Insecurity and COVID-19 Risk: Insights from Mobile Phone Surveys in Bangladesh, Kenya, and Nigeria</strong>
               <span class="output-venue">Applied Economic Perspectives and Policy, 2022</span>
-              <a class="output-link" href="https://doi.org/10.1002/aepp.13200" target="_blank">View Publication</a>
             </span>
           </li>
           <li class="output-item">
-            <span class="output-status status-journal">Journal Article</span>
+            <div class="output-left">
+              <span class="output-status status-journal">Journal Article</span>
+              <a class="output-link" href="https://doi.org/10.1371/journal.pgph.0001086" target="_blank">View Publication</a>
+            </div>
             <span class="output-text">
               <strong>Unmasking the Truth: Experimental Evidence of Facemask Compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 Pandemic</strong>
               <span class="output-venue">PLOS Global Public Health, 2023</span>
-              <a class="output-link" href="https://doi.org/10.1371/journal.pgph.0001086" target="_blank">View Publication</a>
             </span>
           </li>
           <li class="output-item">
-            <span class="output-status status-book">Book Chapter</span>
+            <div class="output-left">
+              <span class="output-status status-book">Book Chapter</span>
+              <a class="output-link" href="https://doi.org/10.7551/mitpress/14895.003.0011" target="_blank">View Publication</a>
+            </div>
             <span class="output-text">
               <strong>Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</strong>
               <span class="output-venue">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis, MIT Press, 2026</span>
-              <a class="output-link" href="https://doi.org/10.7551/mitpress/14895.003.0011" target="_blank">View Publication</a>
             </span>
           </li>
         </ul>
@@ -243,11 +260,13 @@
         <div class="outputs-label">Outputs</div>
         <ul class="output-list">
           <li class="output-item">
-            <span class="output-status status-report">Report</span>
+            <div class="output-left">
+              <span class="output-status status-report">Report</span>
+              <a class="output-link" href="https://doi.org/10.64329/DPIX3065" target="_blank">View Publication</a>
+            </div>
             <span class="output-text">
               <strong>WhatsApp and Women's Livelihoods: How Everyday Digital Practices Shape Pathways to Economic Participation</strong>
               <span class="output-venue">Caribou Digital Publishing, 2026</span>
-              <a class="output-link" href="https://doi.org/10.64329/DPIX3065" target="_blank">View Publication</a>
             </span>
           </li>
         </ul>
