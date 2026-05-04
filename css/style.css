@@ -498,6 +498,36 @@ h2 {
   font-style: italic;
 }
 
+/* ── Tag Taxonomy ────────────────────────────── */
+/*
+  Four categories, each with a tol-palette color:
+  .tag-theme   → purple  (topics: food security, gender, etc.)
+  .tag-geo     → blue    (countries & regions)
+  .tag-method  → green   (research methods)
+  .tag-tech    → warm gray (tools & languages)
+*/
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 2px 9px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.tag-theme  { background: #e8d8e8; color: #5a1f5a; }
+.tag-geo    { background: #d4e6f5; color: #0d3563; }
+.tag-method { background: #d8efd8; color: #1a4a2a; }
+.tag-tech   { background: #ebebea; color: #3a3a3a; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
 /* ── Footer ──────────────────────────────────── */
 footer {
   max-width: 1200px;
