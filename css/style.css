@@ -80,9 +80,9 @@ nav ul a.active      { color: var(--accent); border-color: var(--accent); }
 
 /* ── Layout ──────────────────────────────────── */
 main {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 108px 2rem 100px;
+  padding: 108px 3rem 100px;
 }
 
 /* ── About ───────────────────────────────────── */
@@ -499,9 +499,9 @@ h2 {
 
 /* ── Footer ──────────────────────────────────── */
 footer {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 2rem 3rem;
+  padding: 0 3rem 3rem;
   font-size: 13px;
   color: var(--muted);
   border-top: 1px solid var(--border);
