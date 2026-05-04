@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes — Nicole Y. Wu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .note-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .note-item:last-child { border-bottom: none; }
+
+    .note-meta {
+      padding-top: 3px;
+    }
+
+    .note-date {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .note-tag {
+      display: inline-block;
+      font-size: 10px;
+      color: var(--muted);
+      background: #eeeeea;
+      padding: 1px 6px;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    .note-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.3rem;
+      line-height: 1.4;
+    }
+
+    .note-title:hover { color: var(--accent); }
+
+    .note-excerpt {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .year-group { margin-bottom: 2.5rem; }
+
+    .year-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="name" href="/">Nicole Y. Wu</a>
+  <ul>
+    <li><a href="../index.html">About</a></li>
+    <li><a href="../research/">Research</a></li>
+    <li><a href="../projects/">Projects</a></li>
+    <li><a href="../photography/">Photography</a></li>
+    <li><a href="../field-notes/" class="active">Field Notes</a></li>
+    <li><a href="../cv/">CV</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section>
+    <h2>Field Notes</h2>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:2rem;">
+      Observations from fieldwork, conferences, and things I've been reading.
+    </p>
+
+    <div class="year-group">
+      <div class="year-label">2026</div>
+      <div class="note-item">
+        <div class="note-meta">
+          <span class="note-date">Apr 2026</span>
+          <span class="note-tag">travel</span>
+        </div>
+        <div>
+          <a class="note-title" href="#">Notes from a conference on the coast</a>
+          <p class="note-excerpt">Three days of talks, long walks, and conversations I didn't expect to have. Some loose thoughts on where the field is headed.</p>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-meta">
+          <span class="note-date">Feb 2026</span>
+          <span class="note-tag">methods</span>
+        </div>
+        <div>
+          <a class="note-title" href="#">What I learned running my first field survey</a>
+          <p class="note-excerpt">Logistics, surprises, and what I would do differently. A note to future me.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="year-group">
+      <div class="year-label">2025</div>
+      <div class="note-item">
+        <div class="note-meta">
+          <span class="note-date">Nov 2025</span>
+          <span class="note-tag">reading</span>
+        </div>
+        <div>
+          <a class="note-title" href="#">Reading list: winter edition</a>
+          <p class="note-excerpt">Books and papers I've been sitting with. Some connections I didn't see coming.</p>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-meta">
+          <span class="note-date">Aug 2025</span>
+          <span class="note-tag">fieldwork</span>
+        </div>
+        <div>
+          <a class="note-title" href="#">On being a stranger in the field</a>
+          <p class="note-excerpt">Positionality, trust, and the slow work of showing up.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Nicole Y. Wu
+</footer>
+
+</body>
+</html>

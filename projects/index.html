@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Nicole Y. Wu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .section-intro {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.07);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .project-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .project-badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge-tool  { background: #e8f0f7; color: var(--accent); }
+    .badge-app   { background: #eef5ee; color: #3a7a3a; }
+    .badge-map   { background: #f5f0e8; color: #7a5a2a; }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .project-features li {
+      font-size: 12px;
+      color: var(--muted);
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .project-features li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--border);
+    }
+
+    .project-footer {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      padding: 3px 8px;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+
+    .project-link:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .project-tag {
+      font-size: 10px;
+      color: var(--muted);
+      background: #eeeeea;
+      padding: 1px 6px;
+      border-radius: 2px;
+    }
+
+    .privacy-note {
+      font-size: 11px;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="name" href="../index.html">Nicole Y. Wu</a>
+  <ul>
+    <li><a href="../index.html">About</a></li>
+    <li><a href="../research/">Research</a></li>
+    <li><a href="../projects/" class="active">Projects</a></li>
+    <li><a href="../photography/">Photography</a></li>
+    <li><a href="../field-notes/">Field Notes</a></li>
+    <li><a href="../cv/">CV</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section>
+    <h2>Field Research Tools</h2>
+    <p class="section-intro">Locally-run tools for survey design and data quality monitoring. No files are ever uploaded to a server.</p>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">XLSForm Quality Reviewer</div>
+          <span class="project-badge badge-tool">Tool</span>
+        </div>
+        <p class="project-desc">
+          A quality assurance tool for household survey instruments. Upload an XLSForm and get a structured report covering structural issues, simulation-based logic errors, and survey design recommendations — before the form reaches the field.
+        </p>
+        <ul class="project-features">
+          <li>Structural inspection: broken groups, duplicate names, missing metadata</li>
+          <li>Simulation across hundreds of synthetic respondents to expose unreachable questions</li>
+          <li>Design suggestions across 13 categories with ready-to-copy fix expressions</li>
+          <li>Exportable HTML report with severity badges</li>
+        </ul>
+        <p class="privacy-note">Runs entirely on your machine.</p>
+        <div class="project-footer">
+          <a class="project-link" href="https://github.com/nicolefindstar/xlsform-quality-reviewer" target="_blank">GitHub →</a>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">XLSForm</span>
+          <span class="project-tag">ODK / SurveyCTO</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Survey HFC Dashboard</div>
+          <span class="project-badge badge-tool">Tool</span>
+        </div>
+        <p class="project-desc">
+          A high-frequency data quality monitoring dashboard for food security and household surveys. Upload daily data to track enumerator behavior, flag rates, duplicate records, and cross-indicator contradictions.
+        </p>
+        <ul class="project-features">
+          <li>Ten indicator modules: FCS, rCSI, HDDS, LCS, expenditure, timing, and more</li>
+          <li>FEWS NET cross-indicator illogicality checks</li>
+          <li>Enumerator monitoring: flag rates, means, daily submission heatmaps</li>
+          <li>Survey status, progress-to-target, and priority action items</li>
+        </ul>
+        <p class="privacy-note">Runs entirely on your machine.</p>
+        <div class="project-footer">
+          <a class="project-link" href="https://github.com/nicolefindstar/survey-hfc" target="_blank">GitHub →</a>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Food Security</span>
+          <span class="project-tag">WFP / FEWS NET</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>AI &amp; Creative Projects</h2>
+    <p class="section-intro">Explorations at the edge of AI, planning, and place.</p>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Nicole.go Planner</div>
+          <span class="project-badge badge-app">App</span>
+        </div>
+        <p class="project-desc">
+          An AI-powered travel and itinerary planner. Guides users through a personalized one-question-at-a-time intake, researches destinations live, and builds full day-by-day travel plans entirely in-chat with calendar export.
+        </p>
+        <div class="project-footer">
+          <a class="project-link" href="#" target="_blank">Try it →</a>
+          <span class="project-tag">Claude API</span>
+          <span class="project-tag">AI Agent</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-name">Art Map</div>
+          <span class="project-badge badge-map">Map</span>
+        </div>
+        <p class="project-desc">
+          An interactive map of art spaces, galleries, and public art. Browse by city or neighborhood and explore cultural geography through place.
+        </p>
+        <div class="project-footer">
+          <a class="project-link" href="#" target="_blank">View map →</a>
+          <span class="project-tag">Mapbox</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Nicole Y. Wu
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Nicole Y. Wu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2.8rem;
+    }
+
+    .cv-header h1 { font-size: 22px; }
+
+    .cv-download {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 4px 10px;
+      border-radius: 2px;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .cv-download:hover { background: var(--accent); color: white; }
+
+    .cv-section { margin-bottom: 2.8rem; }
+
+    .cv-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 1.2rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-item:last-child { border-bottom: none; }
+
+    .cv-year {
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 2px;
+      white-space: nowrap;
+    }
+
+    .cv-detail-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .cv-detail-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .cv-detail-note {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.15rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="name" href="/">Nicole Y. Wu</a>
+  <ul>
+    <li><a href="../index.html">About</a></li>
+    <li><a href="../research/">Research</a></li>
+    <li><a href="../projects/">Projects</a></li>
+    <li><a href="../photography/">Photography</a></li>
+    <li><a href="../field-notes/">Field Notes</a></li>
+    <li><a href="../cv/" class="active">CV</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div class="cv-header">
+    <h1>Curriculum Vitae</h1>
+    <a class="cv-download" href="#">Download PDF</a>
+  </div>
+
+  <section class="cv-section">
+    <h2>Education</h2>
+    <div class="cv-item">
+      <div class="cv-year">2021 – present</div>
+      <div>
+        <div class="cv-detail-title">PhD, [Field]</div>
+        <div class="cv-detail-sub">University of California, Berkeley</div>
+        <div class="cv-detail-note">Dissertation: [Title or topic]</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">[Year]</div>
+      <div>
+        <div class="cv-detail-title">[Degree], [Field]</div>
+        <div class="cv-detail-sub">[Institution]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Research &amp; Work Experience</h2>
+    <div class="cv-item">
+      <div class="cv-year">[Year–Year]</div>
+      <div>
+        <div class="cv-detail-title">[Position / Role]</div>
+        <div class="cv-detail-sub">[Organization or Lab]</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">[Year–Year]</div>
+      <div>
+        <div class="cv-detail-title">[Position / Role]</div>
+        <div class="cv-detail-sub">[Organization or Lab]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Publications</h2>
+    <div class="cv-item">
+      <div class="cv-year">2026</div>
+      <div>
+        <div class="cv-detail-title">Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</div>
+        <div class="cv-detail-sub">V Mueller, N Wu, A Rabbani, K Gröpin</div>
+        <div class="cv-detail-note">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2023</div>
+      <div>
+        <div class="cv-detail-title">Unmasking the truth: Experimental evidence of facemask compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 pandemic</div>
+        <div class="cv-detail-sub">KA Gröpin, V Mueller, N Wu, A Rabbani</div>
+        <div class="cv-detail-note">PLOS Global Public Health</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2023</div>
+      <div>
+        <div class="cv-detail-title">Do referrals improve the representation of women in mobile phone surveys?</div>
+        <div class="cv-detail-sub">S Glazerman, KA Grepin, V Mueller, M Rosenbaum, N Wu</div>
+        <div class="cv-detail-note">Journal of Development Economics</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2022</div>
+      <div>
+        <div class="cv-detail-title">Food insecurity and COVID-19 risk in low- and middle-income countries</div>
+        <div class="cv-detail-sub">V Mueller, KA Gröpin, A Rabbani, B Navia, ASW Ngunjiri, N Wu</div>
+        <div class="cv-detail-note">Applied Economic Perspectives and Policy</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2021</div>
+      <div>
+        <div class="cv-detail-title">Residential energy efficiency interventions: A meta-analysis of effectiveness studies</div>
+        <div class="cv-detail-sub">M Berretta, J Furgeson, Y Wu, C Zamawe, I Hamilton, J Eyers</div>
+        <div class="cv-detail-note">Campbell Systematic Reviews</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2020</div>
+      <div>
+        <div class="cv-detail-title">Scaling better together: The International Livestock Research Institute's framework for scaling</div>
+        <div class="cv-detail-sub">I Dror, N Wu</div>
+        <div class="cv-detail-note">International Livestock Research Institute</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">2020</div>
+      <div>
+        <div class="cv-detail-title">Scaling readiness report and scaling plan for training and certification approach for small scale pig feed producers in Uganda</div>
+        <div class="cv-detail-sub">M Sartas, E Kang'ethe, N Wu, I Dror</div>
+        <div class="cv-detail-note">International Livestock Research Institute</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Presentations &amp; Talks</h2>
+    <div class="cv-item">
+      <div class="cv-year">[Year]</div>
+      <div>
+        <div class="cv-detail-title">[Talk title or paper presented]</div>
+        <div class="cv-detail-sub">[Conference / Institution], [Location]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Awards &amp; Fellowships</h2>
+    <div class="cv-item">
+      <div class="cv-year">[Year]</div>
+      <div>
+        <div class="cv-detail-title">[Award or fellowship name]</div>
+        <div class="cv-detail-sub">[Granting institution]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Teaching</h2>
+    <div class="cv-item">
+      <div class="cv-year">[Year]</div>
+      <div>
+        <div class="cv-detail-title">[Course name]</div>
+        <div class="cv-detail-sub">[Role] · [Institution]</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <h2>Skills &amp; Languages</h2>
+    <div class="cv-item">
+      <div class="cv-year">Software</div>
+      <div>
+        <div class="cv-detail-sub">[e.g. R, Stata, Python, QGIS]</div>
+      </div>
+    </div>
+    <div class="cv-item">
+      <div class="cv-year">Languages</div>
+      <div>
+        <div class="cv-detail-sub">[e.g. English (native), Mandarin (fluent)]</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Nicole Y. Wu
+</footer>
+
+</body>
+</html>

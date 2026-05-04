@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Option A — Minimal Academic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f9f9f7;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #2c5f8a;
+      --border: #e0e0dc;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    nav .name {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      transition: color 0.15s;
+    }
+
+    nav ul a:hover, nav ul a.active { color: var(--accent); }
+
+    /* Layout */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 100px 2rem 80px;
+    }
+
+    /* About section */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 160px;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .about-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 4px;
+      background: #d0d8e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8a9aaa;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .affiliation {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    p { margin-bottom: 1rem; color: #333; }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+
+    .links a {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border: 1px solid var(--accent);
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+
+    .links a:hover { background: var(--accent); color: white; }
+
+    /* Section */
+    section { margin-bottom: 3.5rem; }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Publications */
+    .pub-list { list-style: none; }
+
+    .pub-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-item:last-child { border-bottom: none; }
+
+    .pub-title {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-authors {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-venue {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .pub-links { margin-top: 0.4rem; display: flex; gap: 0.6rem; }
+
+    .pub-links a {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .pub-citations {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Photo grid preview */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .photo-cell {
+      aspect-ratio: 1;
+      background: #d4dce5;
+      border-radius: 2px;
+    }
+
+    .photo-cell:nth-child(2) { background: #c8d5c0; }
+    .photo-cell:nth-child(3) { background: #d5cfc8; }
+    .photo-cell:nth-child(4) { background: #cdd5d8; }
+    .photo-cell:nth-child(5) { background: #d8d0cc; }
+    .photo-cell:nth-child(6) { background: #ccc8d5; }
+
+    /* Field notes */
+    .note-list { list-style: none; }
+
+    .note-item {
+      display: flex;
+      gap: 1.5rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+
+    .note-date {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 80px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .note-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .note-title:hover { color: var(--accent); }
+
+    /* Label */
+    .style-label {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="name" href="#">Nicole Y. Wu</a>
+  <ul>
+    <li><a href="#" class="active">About</a></li>
+    <li><a href="#">Research</a></li>
+    <li><a href="#">Photography</a></li>
+    <li><a href="#">Field Notes</a></li>
+    <li><a href="#">CV</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section>
+    <div class="about">
+      <div>
+        <h1>Nicole Y. Wu</h1>
+        <p class="affiliation">PhD Candidate · University of California, Berkeley</p>
+        <p>I study [your research area]. My work sits at the intersection of [theme A] and [theme B], with a focus on [specific question or method].</p>
+        <p>Before Berkeley, I was at [institution]. I am affiliated with [lab / group].</p>
+        <div class="links">
+          <a href="#">Email</a>
+          <a href="#">Google Scholar</a>
+          <a href="#">GitHub</a>
+          <a href="#">Twitter / X</a>
+        </div>
+      </div>
+      <div class="about-photo">photo</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <div class="pub-title">Women's Economic and Social Vulnerability to the Pandemic: Lessons from Bangladesh, Kenya, and Nigeria</div>
+        <div class="pub-authors">V Mueller, N Wu, A Rabbani, K Gröpin</div>
+        <div class="pub-venue">Feminism and COVID-19: How Women Fare in the Face of a Global Crisis, 2026</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Unmasking the truth: Experimental evidence of facemask compliance in Bangladesh, Kenya, and Nigeria during the COVID-19 pandemic</div>
+        <div class="pub-authors">KA Gröpin, V Mueller, N Wu, A Rabbani</div>
+        <div class="pub-venue">PLOS Global Public Health, 2023</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Do referrals improve the representation of women in mobile phone surveys?</div>
+        <div class="pub-authors">S Glazerman, KA Grepin, V Mueller, M Rosenbaum, N Wu</div>
+        <div class="pub-venue">Journal of Development Economics, 2023</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Food insecurity and COVID-19 risk in low- and middle-income countries</div>
+        <div class="pub-authors">V Mueller, KA Gröpin, A Rabbani, B Navia, ASW Ngunjiri, N Wu</div>
+        <div class="pub-venue">Applied Economic Perspectives and Policy, 2022</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Residential energy efficiency interventions: A meta-analysis of effectiveness studies</div>
+        <div class="pub-authors">M Berretta, J Furgeson, Y Wu, C Zamawe, I Hamilton, J Eyers</div>
+        <div class="pub-venue">Campbell Systematic Reviews, 2021</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Scaling better together: The International Livestock Research Institute's framework for scaling</div>
+        <div class="pub-authors">I Dror, N Wu</div>
+        <div class="pub-venue">International Livestock Research Institute, 2020</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+      <li class="pub-item">
+        <div class="pub-title">Scaling readiness report and scaling plan for training and certification approach for small scale pig feed producers in Uganda</div>
+        <div class="pub-authors">M Sartas, E Kang'ethe, N Wu, I Dror</div>
+        <div class="pub-venue">International Livestock Research Institute, 2020</div>
+        <div class="pub-links"><a href="#">Link</a></div>
+      </li>
+    </ul>
+  </section>
+
+
+</main>
+
+<div class="style-label">Option A — Minimal Academic</div>
+
+</body>
+</html>
